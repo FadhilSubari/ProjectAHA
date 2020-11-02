@@ -13,7 +13,7 @@ report 54004 "Report Stock Release Order"
             {
 
             }
-            column(CustomerData; CustomerData.Address)
+            column(CustomerData; CardLocation.Name)
             {
 
             }
@@ -79,6 +79,10 @@ report 54004 "Report Stock Release Order"
 
                 CustomerData.SetRange("No.", "Ship-to Client No.");
                 CustomerData.FindFirst();
+                if CustomerData.FindFirst() then begin
+                    CardLocation.SetRange("Code", CustomerData."Location Code");
+                    CardLocation.FindFirst();
+                end;
             end;
             // dataitem(Customer; Customer)
             // {
@@ -131,6 +135,7 @@ report 54004 "Report Stock Release Order"
         CompanyInformasi: Record "Company Information";
         CustomerData: Record Customer;
         stockRelease: Record "Stock Release Header";
+        CardLocation: Record Location;
 
 
 }
