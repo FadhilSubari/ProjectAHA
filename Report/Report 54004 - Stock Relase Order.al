@@ -84,18 +84,7 @@ report 54004 "Report Stock Release Order"
                     CardLocation.FindFirst();
                 end;
             end;
-            // dataitem(Customer; Customer)
-            // {
-            //     DataItemLink = "No." = field("Ship-to Client No.");
-            //     column(No_Item; "No.")
-            //     {
 
-            //     }
-            //     column(Address; Address)
-            //     {
-
-            //     }
-            // }
         }
     }
 
