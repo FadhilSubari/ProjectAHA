@@ -6,7 +6,7 @@ report 54000 "Report Posted Purchase Receipt"
     PreviewMode = PrintLayout;
     RDLCLayout = './Report/Report 54000 - Posted Purchase Receipt.rdlc';
 
-
+//fadhil
     dataset
     {
         dataitem("Purch. Rcpt. Header"; "Purch. Rcpt. Header")
