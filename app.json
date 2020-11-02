@@ -1,0 +1,33 @@
+{
+  "id": "a1428468-5798-43f2-bc9b-c7688973409c",
+  "name": "NurApp",
+  "publisher": "Nur Fadhil Subari",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "ca77da5d-ee96-4538-a742-7848dd43ac0e",
+      "publisher": "MSI",
+      "name": "AHA App",
+      "version": "17.0.1.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "17.0.0.0",
+  "application": "17.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 59999
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://ALProject1.com/help/",
+  "showMyCode": false,
+  "runtime": "6.0"
+}
