@@ -130,7 +130,7 @@ report 54003 "Report Purchase Receipt"
         CurrReportPageNoCaptionLbl: Label 'Page';
         WarehouseReceiptCaptionLbl: Label 'Warehouse - Receipt';
 
-
+    //heheheh
     local procedure GetLocation(LocationCode: Code[10])
     begin
         if LocationCode = '' then
