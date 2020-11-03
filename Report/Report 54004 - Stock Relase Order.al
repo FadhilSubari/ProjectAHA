@@ -1,6 +1,6 @@
 report 54004 "Report Stock Release Order"
 {
-    UsageCategory = Administration;
+    UsageCategory = Documents;
     ApplicationArea = All;
     PreviewMode = PrintLayout;
     RDLCLayout = './Report/Report 54004 - Stock Release Order.rdlc';
