@@ -72,11 +72,28 @@ report 54004 "Report Stock Release Order"
                 {
 
                 }
+                column(SystemId; SystemId)
+                {
+
+                }
+                column(Balance; Balance) { }
+            }
+            dataitem("Stock Release Line2"; "Stock Release Line")
+            {
+                column(PreBalance; PreBalance)
+                {
+
+                }
+                trigger OnAfterGetRecord()
+                begin
+                    RecLine.SetRange("Document No.", '1');
+                    if RecLine.FindFirst() then begin
+                        PreBalance := RecLine.Quantity;
+                    end;
+                end;
             }
             trigger OnAfterGetRecord()
-
             begin
-
                 CustomerData.SetRange("No.", "Ship-to Client No.");
                 CustomerData.FindFirst();
                 if CustomerData.FindFirst() then begin
@@ -121,10 +138,16 @@ report 54004 "Report Stock Release Order"
     end;
 
     var
+
+        RecLine: Record "Stock Release Line";
+        RecLine2: Record "Stock Release Line";
         CompanyInformasi: Record "Company Information";
         CustomerData: Record Customer;
         stockRelease: Record "Stock Release Header";
         CardLocation: Record Location;
+        PreBalance: Decimal;
+        Balance: Decimal;
+        Quntiti: Decimal;
 
 
 }
